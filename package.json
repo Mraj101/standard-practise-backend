@@ -1,0 +1,8 @@
+{
+  "name": "production-backend",
+  "version": "1.0.0",
+  "description": "a backend at production practise",
+  "main": "index.js",
+  "author": "Hasnain Ahmed",
+  "license": "MIT"
+}
