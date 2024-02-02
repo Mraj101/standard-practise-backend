@@ -2,7 +2,14 @@
   "name": "production-backend",
   "version": "1.0.0",
   "description": "a backend at production practise",
+  "type": "module",
   "main": "index.js",
+  "scripts": {
+    "dev":"nodemon src/index.js"
+  },
   "author": "Hasnain Ahmed",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
 }
