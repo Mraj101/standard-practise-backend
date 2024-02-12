@@ -1,18 +1,18 @@
-// import {mongoose} from "mongoose";
-// // import {dbName} from "./src/constants.js"
+import {mongoose} from "mongoose";
+import dbName from "../db/index.js"
+import dotenv from "dotenv";
+dotenv.config({path:"./env"});
 
+const DbConnect=async ()=> {
 
-// const DbConnect=async ()=> {
-//     try{
-//         const connectionInstance = await mongoose.connect(`${process.env.CONNECTOIN_URI}/${dbName}`)
-//         console.log(`conneted to database !!! DB HOST:${connectionInstance}`)
-//     }
-//     catch(error){
-//         console.log("Db connection Failed: ",error)
-//         process.exit(1)
-//     }
-//     console.log("hi");
+      try {
+    let connectionInstance = await mongoose.connect(`${process.env.CONNECTION_URI}/${dbName}`);
+    console.log("Connected to MongoDB, !! HOST:",connectionInstance.connection.host);
+  } catch (error) {
+    console.log("Connection failed and more: ", error);
+    process.exit(1);
+  }
 
-// }
+}
 
-// export default DbConnect
+export default DbConnect
